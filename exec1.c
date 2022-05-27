@@ -11,8 +11,8 @@ int main(int argc, char *argv[ ])
     printf("Usage: %s fileName\n", argv[0]);
     exit(-1);
   }
-  
-  execlp("/bin/catt", "catt", argv[1], (char *) NULL);
+  // it takes the path and the name of the file and then finally the agruments
+  execlp("/bin/catt", "cat", argv[1], (char *) NULL);
   perror("exec failure ");
   exit(-2);
 }
